@@ -1,1 +1,2 @@
 #+TITLE: Dotfiles
+* Managing my dotfiles using Dotdrop
