@@ -27,10 +27,20 @@ output eDP-1 {
 
 # --- Input (Devices) ---
 input mouse accel_profile flat
-input touchpad natural_scroll enabled
+input touchpad {
+  tap enabled
+  tap_button_map lrm
+  natural_scroll enabled
+  middle_emulation enabled
+}
 input touch natural_scroll enabled
 ## --- Surface Laptop Studio Settings ---
-input 1118:2479:Microsoft_Surface_045E:09AF_Touchpad natural_scroll enabled
+input 1118:2479:Microsoft_Surface_045E:09AF_Touchpad {
+  tap enabled
+  tap_button_map lrm
+  natural_scroll enabled
+  middle_emulation enabled
+}
 input 1118:2480:Microsoft_Surface_045E:09B0_Keyboard xkb_layout gb
 input 1118:2478:Microsoft_Surface_045E:09AE_Keyboard xkb_layout gb
 
