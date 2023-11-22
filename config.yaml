@@ -42,6 +42,9 @@ dotfiles:
   d_nvim:
     src: config/nvim
     dst: ~/.config/nvim
+  d_emacs.d:
+    src: emacs.d
+    dst: ~/.emacs.d
 profiles:
   Aloo-Paratha:
     dotfiles:
@@ -56,3 +59,4 @@ profiles:
     - f_monochrome-building.jpeg
     - d_omf
     - d_nvim
+    - d_emacs.d
