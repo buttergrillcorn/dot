@@ -1,0 +1,56 @@
+#+title: Linux Dotfiles
+* Packages
+** Window Manager
+*** Sway
+Sway-im for better input manager (fcitx5) support
+**** swaybg
+**** swaylock
+**** swayidle
+**** sway autotiling
+[[https://github.com/nwg-piotr/autotiling]]
+Aur package available
+*** Waybar
+** Screenshot
+*** wl-record
+** Clipboard
+** Notification
+*** Mako
+*** Dunst (optional alternative)
+** Customization
+*** GTK Themes
+**** Arc gruvbox
+Dark grey color
+*** QT Themes
+**** Qt5ct/Qt6ct
+**** Kvantum
+*** Fonts
+**** Sarasa Term SC Nerd
+** Menu
+*** Fuzzel
+** Terminal
+*** Foot
+*** Alacritty (optional alternative)
+*** Kitty (optional alternative)
+** Shell
+*** Fish
+**** Oh-my-fish
+***** Theme
++ Boxfish
+***** Plugins
++ autojump
++ emacs
++ fuck
++ fzf-autojump
++ pisces
++ virtualfish
++ z
+**** Fisher
+***** fish-ssh-agent
+danhper/fish-ssh-agent
+** Utils
+*** Status Bar Applets
+**** Network Manager Applet
+**** Blueman Applet
+** Text Editor
+*** Emacs
+**** Doom
