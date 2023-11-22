@@ -1,0 +1,50 @@
+config:
+  backup: true
+  banner: true
+  create: true
+  dotpath: dotfiles
+  keepdot: false
+  link_dotfile_default: nolink
+  link_on_import: nolink
+  longkey: false
+dotfiles:
+  d_doom:
+    src: config/doom
+    dst: ~/.config/doom
+  d_fish:
+    src: config/fish
+    dst: ~/.config/fish
+  d_foot:
+    src: config/foot
+    dst: ~/.config/foot
+  d_fuzzel:
+    src: config/fuzzel
+    dst: ~/.config/fuzzel
+  d_mako:
+    src: config/mako
+    dst: ~/.config/mako
+  d_sway:
+    src: config/sway
+    dst: ~/.config/sway
+  d_thunar:
+    src: config/Thunar
+    dst: ~/.config/Thunar
+    chmod: '700'
+  d_waybar:
+    src: config/waybar
+    dst: ~/.config/waybar
+  f_monochrome-building.jpeg:
+    src: Pictures/Wallpapers/monochrome-building.jpeg
+    dst: ~/Pictures/Wallpapers/monochrome-building.jpeg
+profiles:
+  Aloo-Paratha:
+    dotfiles:
+    - d_doom
+    - d_fish
+    - d_foot
+    - d_fuzzel
+    - d_mako
+    - d_sway
+    - d_thunar
+    - d_waybar
+    - f_monochrome-building.jpeg

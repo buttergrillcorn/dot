@@ -1,0 +1,16 @@
+max-history=25
+font=Sarasa Term SC Nerd 12
+background-color=#202020
+text-color=#9f9f9f
+width=300
+height=100
+padding=15
+border-size=2
+border-color=#dfdfdf
+progress-color=over #dfdfdf
+icons=1
+max-icon-size=32
+layer=overlay
+
+[urgency=high]
+border-color=#BB2205

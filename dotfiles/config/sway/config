@@ -1,0 +1,193 @@
+# Variables
+set $mod Mod4
+set $left h
+set $down j
+set $up k
+set $right l
+set $term foot
+set $term-float foot -a foot-float
+set $menu fuzzel
+set $browser firefox
+set $editor foot nvim
+# set $editor emacsclient -c -a ""
+# set $editor-reload notify-send "Emacs Service Restarted" "$(systemctl --user stop emacs && systemctl --user start emacs)"
+set $file thunar
+set $file-float  ~/.config/sway/floating thunar
+
+# --- Output (Displays) ---
+output HDMI-A-1 {
+       resolution 2560x1440@144Hz position 0,0
+       background ~/Pictures/Wallpapers/monochrome-building.jpeg fill
+       }
+## --- Surface Laptop Studio Settings ---
+output eDP-1 {
+       resolution 2400x1600@120Hz position 0,0 scale 1.25
+       background ~/Pictures/Wallpapers/monochrome-building.jpeg fill
+}
+
+# --- Input (Devices) ---
+input mouse accel_profile flat
+input touchpad natural_scroll enabled
+input touch natural_scroll enabled
+## --- Surface Laptop Studio Settings ---
+input 1118:2479:Microsoft_Surface_045E:09AF_Touchpad natural_scroll enabled
+input 1118:2480:Microsoft_Surface_045E:09B0_Keyboard xkb_layout gb
+input 1118:2478:Microsoft_Surface_045E:09AE_Keyboard xkb_layout gb
+
+gaps inner 7
+gaps outer 0
+default_border pixel 2
+default_floating_border pixel 2
+# Color palette:    #202020 #606060 #9f9f9f #dfdfdf
+client.focused      #dfdfdf #dfdfdf #202020 #9f9f9f #dfdfdf
+client.unfocused    #606060 #606060 #dfdfdf #606060 #606060
+
+# Lockscreen & Idle
+exec swayidle -w \
+     timeout 600 'swaylock -f -c 000000' \
+     timeout 1800 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+     before-sleep 'swaylock -f -c 000000'
+
+# Bindings
+bindsym $mod+Return exec $term
+bindsym $mod+Shift+Return exec $term-float
+
+bindsym $mod+q kill
+
+bindsym $mod+d exec $menu
+bindsym $mod+b exec $browser
+bindsym $mod+n exec $editor
+bindsym $mod+Ctrl+Shift+n exec $editor-reload
+bindsym $mod+e exec $file
+bindsym $mod+Shift+e exec $file-float
+
+floating_modifier $mod normal
+
+bindsym $mod+Shift+r reload
+
+bindsym $mod+Shift+x exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+
+    bindsym $mod+$left focus left
+    bindsym $mod+$down focus down
+    bindsym $mod+$up focus up
+    bindsym $mod+$right focus right
+
+    bindsym $mod+Left focus left
+    bindsym $mod+Down focus down
+    bindsym $mod+Up focus up
+    bindsym $mod+Right focus right
+
+    bindsym $mod+Shift+$left move left
+    bindsym $mod+Shift+$down move down
+    bindsym $mod+Shift+$up move up
+    bindsym $mod+Shift+$right move right
+
+    bindsym $mod+Shift+Left move left
+    bindsym $mod+Shift+Down move down
+    bindsym $mod+Shift+Up move up
+    bindsym $mod+Shift+Right move right
+
+    bindsym $mod+1 workspace number 1
+    bindsym $mod+2 workspace number 2
+    bindsym $mod+3 workspace number 3
+    bindsym $mod+4 workspace number 4
+    bindsym $mod+5 workspace number 5
+    bindsym $mod+6 workspace number 6
+    bindsym $mod+7 workspace number 7
+    bindsym $mod+8 workspace number 8
+    bindsym $mod+9 workspace number 9
+    bindsym $mod+0 workspace number 10
+
+    bindsym $mod+Shift+1 move container to workspace number 1
+    bindsym $mod+Shift+2 move container to workspace number 2
+    bindsym $mod+Shift+3 move container to workspace number 3
+    bindsym $mod+Shift+4 move container to workspace number 4
+    bindsym $mod+Shift+5 move container to workspace number 5
+    bindsym $mod+Shift+6 move container to workspace number 6
+    bindsym $mod+Shift+7 move container to workspace number 7
+    bindsym $mod+Shift+8 move container to workspace number 8
+    bindsym $mod+Shift+9 move container to workspace number 9
+    bindsym $mod+Shift+0 move container to workspace number 10
+
+    bindsym $mod+Ctrl+h splith
+    bindsym $mod+Ctrl+v splitv
+
+    bindsym $mod+s layout toggle split
+    bindsym $mod+Shift+s layout tabbed
+    bindsym $mod+Shift+Ctrl+s layout stacking
+
+    bindsym $mod+Shift+f fullscreen
+
+    bindsym $mod+f floating toggle
+
+    bindsym $mod+Tab focus mode_toggle
+
+    bindsym $mod+a focus parent
+
+    bindsym $mod+w scratchpad show
+    bindsym $mod+Shift+w move scratchpad
+
+bindsym $mod+r mode "resize"
+mode "resize" {
+    bindsym $left resize shrink width 10px
+    bindsym $down resize grow height 10px
+    bindsym $up resize shrink height 10px
+    bindsym $right resize grow width 10px
+
+    bindsym Left resize shrink width 10px
+    bindsym Down resize grow height 10px
+    bindsym Up resize shrink height 10px
+    bindsym Right resize grow width 10px
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym Print exec sway-interactive-screenshot
+bindsym Shift+Print exec sway-interactive-screenshot --video
+
+# Status Bar
+bar {
+    swaybar_command waybar
+#     position top
+#     font Maple Mono SC NF
+#     status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
+#     separator_symbol |
+#     colors {
+#         statusline #ffffff
+#         background #323232
+#         inactive_workspace #32323200 #32323200 #5c5c5c
+#     }
+#     tray_padding 4
+#     icon_theme Qogir
+}
+
+# Autostarts
+include /etc/sway/config.d/*
+
+exec wl-paste -t text --watch clipman store --no-persist
+exec mako
+exec blueman-applet
+exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1 
+exec /usr/lib/xdg-desktop-portal -r
+exec /usr/lib/xdg-desktop-portal-wlr
+exec nm-applet --indicator
+exec kmix
+exec fcitx5
+exec autotiling
+exec emacs --daemon
+
+# Window rules
+for_window [app_id="firefox" title="Firefox — Sharing Indicator"] border none, floating enable, nofocus
+for_window [app_id="firefoxdeveloperedition" title="Firefox Developer Edition — Sharing Indicator"] border none, floating enable, nofocus
+for_window [window_role="pop-up"] floating enable
+for_window [title="^Picture in picture$"] \
+floating enable, move position 877 450, sticky enable, border none
+for_window [app_id="firefox" title="^Picture-in-Picture$"] \
+floating enable, move position 877 450, sticky enable, border none
+for_window [app_id="blueman-manager"] floating enable
+for_window [app_id="org.kde.kmix"] floating enable
+for_window [app_id="foot-float"] floating enable
+for_window [app_id="pavucontrol"] floating enable
+for_window [app_id="nwg-look"] floating enable
+for_window [app_id="qt6ct"] floating enable
