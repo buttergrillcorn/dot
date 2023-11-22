@@ -36,6 +36,12 @@ dotfiles:
   f_monochrome-building.jpeg:
     src: Pictures/Wallpapers/monochrome-building.jpeg
     dst: ~/Pictures/Wallpapers/monochrome-building.jpeg
+  d_omf:
+    src: config/omf
+    dst: ~/.config/omf
+  d_nvim:
+    src: config/nvim
+    dst: ~/.config/nvim
 profiles:
   Aloo-Paratha:
     dotfiles:
@@ -48,3 +54,5 @@ profiles:
     - d_thunar
     - d_waybar
     - f_monochrome-building.jpeg
+    - d_omf
+    - d_nvim
