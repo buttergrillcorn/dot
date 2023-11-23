@@ -142,7 +142,7 @@
 
 (use-package general
   :config
-  (general-create-definer rune/leader-keys
+  (general-create-definer butt/leader-keys
     :keymaps '(normal insert visual emacs)
     :prefix "SPC"
     :global-prefix "M-SPC")
@@ -182,5 +182,6 @@
   ("k" text-scale-decrease "out")
   ("f" nil "finished" :exit t))
 
-(rune/leader-keys
+(butt/leader-keys
   "ts" '(hydra-text-scale/body :which-key "scale text"))
+
