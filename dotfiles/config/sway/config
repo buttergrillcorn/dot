@@ -8,7 +8,8 @@ set $term foot
 set $term-float foot -a foot-float
 set $menu fuzzel
 set $browser firefox
-set $editor foot nvim
+# set $editor foot nvim
+set $editor emacs
 # set $editor emacsclient -c -a ""
 # set $editor-reload notify-send "Emacs Service Restarted" "$(systemctl --user stop emacs && systemctl --user start emacs)"
 set $file thunar
