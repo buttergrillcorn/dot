@@ -157,12 +157,6 @@ mode "resize" {
 bindsym Print exec sway-interactive-screenshot
 bindsym Shift+Print exec sway-interactive-screenshot --video
 
-bindsym XF86MonBrightnessUp exec light -A 10
-bindsym XF86MonBrightnessDown exec light -U 10
-bindsym XF86AudioMute exec pamixer -t
-bindsym XF86AudioRaiseVolume exec pamixer -i 5
-bindsym XF86AudioLowerVolume exec pamixer -d 5
-
 # Status Bar
 bar {
     swaybar_command waybar

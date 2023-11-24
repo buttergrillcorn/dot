@@ -9,6 +9,8 @@ Sway-im for better input manager (fcitx5) support
 **** sway autotiling
 [[https://github.com/nwg-piotr/autotiling]]
 Aur package available
+**** sway-interactive-screenshot
+Aur package available
 *** Waybar
 ** Screenshot
 *** wl-record
@@ -51,6 +53,9 @@ danhper/fish-ssh-agent
 *** Status Bar Applets
 **** Network Manager Applet
 **** Blueman Applet
+*** Audio
+**** Pamixer
+ClI audio client
 ** Text Editor
 *** Emacs
 **** Doom
