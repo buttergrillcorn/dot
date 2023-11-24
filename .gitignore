@@ -1,2 +1,6 @@
 **/.cache
 dotfiles/emacs.d/.cache/
+dotfiles/emacs.d/auto-save-list
+dotfiles/emacs.d/elpa
+dotfiles/emacs.d/transient
+dotfiles/config/fish/themes
