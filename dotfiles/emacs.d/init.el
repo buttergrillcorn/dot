@@ -147,9 +147,12 @@
     :prefix "SPC"
     :global-prefix "M-SPC")
 
-  (rune/leader-keys
+  (butt/leader-keys
     "t"  '(:ignore t :which-key "toggles")
-    "tt" '(counsel-load-theme :which-key "choose theme")))
+    "tt" '(counsel-load-theme :which-key "choose theme")
+    "." '(find-file :which-key "find file")
+    "o" '(:ignore t :which-key "org mode")
+    "oa" '(org-agenda :which-key "agenda")))
 
 (use-package evil
   :init
@@ -184,4 +187,9 @@
 
 (butt/leader-keys
   "ts" '(hydra-text-scale/body :which-key "scale text"))
+
+(use-package magit)
+
+(use-package forge)
+
 
