@@ -1,1 +1,1 @@
-("~/dot/" "~/git/code-mirror/")
+("~/org/" "~/dot/")
