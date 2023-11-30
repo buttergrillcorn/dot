@@ -7,13 +7,16 @@ config:
   link_dotfile_default: nolink
   link_on_import: nolink
   longkey: false
+
 dotfiles:
   d_doom:
     src: config/doom
     dst: ~/.config/doom
+    template: true
   d_fish:
     src: config/fish
     dst: ~/.config/fish
+    ignore_missing_in_dotdrop: true
   d_foot:
     src: config/foot
     dst: ~/.config/foot
@@ -45,7 +48,10 @@ dotfiles:
   d_emacs.d:
     src: emacs.d
     dst: ~/.emacs.d
+    ignore_missing_in_dotdrop: true
+
 profiles:
+
   Aloo-Paratha:
     dotfiles:
     - d_doom
@@ -59,4 +65,19 @@ profiles:
     - f_monochrome-building.jpeg
     - d_omf
     - d_nvim
-    - d_emacs.d
+    # - d_emacs.d
+
+  Aloo-Paratha-Laptop:
+    dotfiles:
+    - d_doom
+    - d_fish
+    - d_foot
+    - d_fuzzel
+    - d_mako
+    - d_sway
+    - d_thunar
+    - d_waybar
+    - f_monochrome-building.jpeg
+    - d_omf
+    - d_nvim
+    # - d_emacs.d

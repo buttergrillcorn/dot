@@ -1,3 +1,4 @@
+;;; {{@@ header() @@}}
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
 ;; Place your private configuration here! Remember, you do not need to run 'doom
@@ -20,11 +21,18 @@
 ;;
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
-;;
+
+{%@@ if profile == "Aloo-Paratha" @@%}
 (setq doom-font (font-spec :family "Sarasa Term SC Nerd" :size 15 :weight 'Semibold)
       doom-variable-pitch-font (font-spec :family "Sarasa Term SC Nerd" :size 15)
       doom-unicode-font (font-spec :family "Symbols Nerd Font Mono" :size 16))
-;;
+
+{%@@ elif profile == "Aloo-Paratha-Laptop" @@%}
+(setq doom-font (font-spec :family "Sarasa Term SC Nerd" :size 18 :weight 'Semibold)
+      doom-variable-pitch-font (font-spec :family "Sarasa Term SC Nerd" :size 18)
+      doom-unicode-font (font-spec :family "Symbols Nerd Font Mono" :size 18))
+{%@@ endif @@%}
+
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
 ;; refresh your font settings. If Emacs still can't find your font, it likely
@@ -92,3 +100,5 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+(setq which-key-idle-delay 0.2)
