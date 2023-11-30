@@ -22,7 +22,7 @@ output HDMI-A-1 {
        }
 ## --- Surface Laptop Studio Settings ---
 output eDP-1 {
-       resolution 2400x1600@120Hz position 0,0 scale 1.25
+       resolution 2400x1600@120Hz position 0,0 scale 1
        background ~/Pictures/Wallpapers/monochrome-building.jpeg fill
 }
 

@@ -1,9 +1,14 @@
+/* {{@@ header() @@}} */
 * {
     border: none;
     border-radius: 0;
     font-family: JetBrainsMono Nerd Font;
     font-weight: Bold;
+    {%@@ if profile == "Aloo-Paratha" @@%}
     font-size: 14px;
+    {%@@ elif profile == "Aloo-Paratha-Laptop" @@%}
+    font-size: 18px;
+    {%@@ endif @@%}
     min-height: 0;
 }
 
