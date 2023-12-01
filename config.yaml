@@ -7,7 +7,6 @@ config:
   link_dotfile_default: nolink
   link_on_import: nolink
   longkey: false
-
 dotfiles:
   d_doom:
     src: config/doom
@@ -49,9 +48,10 @@ dotfiles:
     src: emacs.d
     dst: ~/.emacs.d
     ignore_missing_in_dotdrop: true
-
+  d_twine:
+    src: Documents/Twine
+    dst: ~/Documents/Twine
 profiles:
-
   Aloo-Paratha:
     dotfiles:
     - d_doom
@@ -67,6 +67,7 @@ profiles:
     - d_nvim
     # - d_emacs.d
 
+    - d_twine
   Aloo-Paratha-Laptop:
     dotfiles:
     - d_doom
