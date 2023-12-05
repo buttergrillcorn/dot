@@ -10,6 +10,7 @@ set $menu fuzzel
 set $browser firefox
 # set $editor foot nvim
 set $editor emacs
+set $editor-term foot emacs -nw
 # set $editor emacsclient -c -a ""
 # set $editor-reload notify-send "Emacs Service Restarted" "$(systemctl --user stop emacs && systemctl --user start emacs)"
 set $file thunar
@@ -68,6 +69,7 @@ bindsym $mod+q kill
 bindsym $mod+d exec $menu
 bindsym $mod+b exec $browser
 bindsym $mod+n exec $editor
+bindsym $mod+Shift+n exec $editor-term
 bindsym $mod+Ctrl+Shift+n exec $editor-reload
 bindsym $mod+e exec $file
 bindsym $mod+Shift+e exec $file-float
