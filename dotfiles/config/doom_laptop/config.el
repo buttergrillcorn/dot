@@ -45,16 +45,15 @@
 (setq org-directory "~/org/")
 
 ;; Org Capture
-(setq org-default-notes-file
-      (concat org-directory "refile.org"))
-(setq org-capture-templates
-      `(("t" "Todo" entry (file "~/org/todo.org")
-         "* TODO %U %?" :empty-lines-after 1)
-        ("i" "Inbox" entry (file "~/org/inbox.org")
-         "* %U %?" :empty-lines-after 1)
-        ("w" "Work" entry (file "~/org/work.org")
-         "* %U %?  %(org-set-tags \"work\")" :empty-lines-after 1)
-        ))
+(after! org
+  (setq org-capture-templates
+        `(("t" "Todo" entry (file "~/org/todo.org")
+           "* TODO %U %?" :empty-lines-after 1)
+          ("i" "Inbox" entry (file "~/org/inbox.org")
+           "* %U %?" :empty-lines-after 1)
+          ("w" "Work" entry (file "~/org/work.org")
+           "* %U %?  %(org-set-tags \"work\")" :empty-lines-after 1)
+          )))
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
