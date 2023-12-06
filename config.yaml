@@ -11,7 +11,9 @@ dotfiles:
   d_doom:
     src: config/doom
     dst: ~/.config/doom
-    template: true
+  d_doom_laptop:
+    src: config/doom_laptop
+    dst: ~/.config/doom
   d_fish:
     src: config/fish
     dst: ~/.config/fish
@@ -70,7 +72,7 @@ profiles:
     - d_twine
   Aloo-Paratha-Laptop:
     dotfiles:
-    - d_doom
+    - d_doom_laptop
     - d_fish
     - d_foot
     - d_fuzzel
