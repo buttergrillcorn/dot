@@ -11,9 +11,7 @@ dotfiles:
   d_doom:
     src: config/doom
     dst: ~/.config/doom
-  d_doom_laptop:
-    src: config/doom_laptop
-    dst: ~/.config/doom
+    template: true
   d_fish:
     src: config/fish
     dst: ~/.config/fish
@@ -68,11 +66,11 @@ profiles:
     - d_omf
     - d_nvim
     # - d_emacs.d
-
     - d_twine
+
   Aloo-Paratha-Laptop:
     dotfiles:
-    - d_doom_laptop
+    - d_doom
     - d_fish
     - d_foot
     - d_fuzzel
@@ -84,3 +82,4 @@ profiles:
     - d_omf
     - d_nvim
     # - d_emacs.d
+    - d_twine

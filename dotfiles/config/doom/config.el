@@ -22,9 +22,9 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 
-(setq doom-font (font-spec :family "Sarasa Term SC Nerd" :size 15 :weight 'Semibold)
-      doom-variable-pitch-font (font-spec :family "Sarasa Term SC Nerd" :size 15)
-      doom-unicode-font (font-spec :family "Symbols Nerd Font Mono" :size 16))
+; (setq doom-font (font-spec :family "Sarasa Term SC Nerd" :size 15 :weight 'Semibold)
+;       doom-variable-pitch-font (font-spec :family "Sarasa Term SC Nerd" :size 15)
+;       doom-unicode-font (font-spec :family "Symbols Nerd Font Mono" :size 16))
 
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -34,7 +34,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-1337)
+(setq doom-theme 'doom-tomorrow-night)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -88,6 +88,9 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+;; Load external files
+(load! "font.el")
+
 (setq which-key-idle-delay 0.2)
 (setq auto-save-visited-interval 15)
 (auto-save-visited-mode +1)
@@ -99,3 +102,12 @@
 ;; Projects
 (projectile-add-known-project "~/org")
 (projectile-add-known-project "~/dot")
+
+;; Shell
+(setq shell-file-name (executable-find "bash"))
+(setq-default vterm-shell (executable-find "fish"))
+(setq-default explicit-shell-file-name (executable-find "fish"))
+
+;; Dimmer
+(setq dimmer-mode t)
+(setq dimmer-fraction 0.4)
