@@ -22,9 +22,9 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 
-; (setq doom-font (font-spec :family "Sarasa Term SC Nerd" :size 15 :weight 'Semibold)
-;       doom-variable-pitch-font (font-spec :family "Sarasa Term SC Nerd" :size 15)
-;       doom-unicode-font (font-spec :family "Symbols Nerd Font Mono" :size 16))
+;; (setq doom-font (font-spec :family "Sarasa Term SC Nerd" :size 15 :weight 'Semibold)
+;;       doom-variable-pitch-font (font-spec :family "Sarasa Term SC Nerd" :size 15)
+;;       doom-unicode-font (font-spec :family "Symbols Nerd Font Mono" :size 16))
 
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -45,16 +45,15 @@
 (setq org-directory "~/org/")
 
 ;; Org Capture
-(setq org-default-notes-file
-      (concat org-directory "refile.org"))
-(setq org-capture-templates
-      `(("t" "Todo" entry (file "~/org/todo.org")
-         "* TODO %U %?" :empty-lines-after 1)
-        ("i" "Inbox" entry (file "~/org/inbox.org")
-         "* %t %?" :empty-lines-after 1)
-        ("w" "Work" entry (file "~/org/work.org")
-         "* %t %?  %(org-set-tags \"work\")" :empty-lines-after 1)
-        ))
+(after! org
+  (setq org-capture-templates
+        `(("t" "Todo" entry (file "~/org/todo.org")
+           "* TODO %U %?" :empty-lines-after 1)
+          ("i" "Inbox" entry (file "~/org/inbox.org")
+           "* %t %?" :empty-lines-after 1)
+          ("w" "Work" entry (file "~/org/work.org")
+           "* %t %?  %(org-set-tags \"work\")" :empty-lines-after 1)
+          )))
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
