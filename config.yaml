@@ -48,9 +48,6 @@ dotfiles:
     src: emacs.d
     dst: ~/.emacs.d
     ignore_missing_in_dotdrop: true
-  d_twine:
-    src: Documents/Twine
-    dst: ~/Documents/Twine
 profiles:
   Aloo-Paratha:
     dotfiles:
@@ -66,7 +63,6 @@ profiles:
     - d_omf
     - d_nvim
     # - d_emacs.d
-    - d_twine
 
   Aloo-Paratha-Laptop:
     dotfiles:
@@ -82,4 +78,3 @@ profiles:
     - d_omf
     - d_nvim
     # - d_emacs.d
-    - d_twine
