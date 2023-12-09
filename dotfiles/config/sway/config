@@ -56,8 +56,8 @@ client.unfocused    #606060 #606060 #dfdfdf #606060 #606060
 
 # Lockscreen & Idle
 exec swayidle -w \
-     timeout 1200 'swaylock -f -c 202020 --indicator-idle-visible' \
-     timeout 1800 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+     timeout 1800 'swaylock -f -c 202020 --indicator-idle-visible' \
+     timeout 2700 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
      before-sleep 'swaylock -f -c 202020 --indicator-idle-visible'
 
 # Bindings
