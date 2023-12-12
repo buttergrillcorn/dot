@@ -112,7 +112,8 @@
   :config
   (dimmer-mode)
   (setq dimmer-fraction 0.5)
-  (dimmer-configure-which-key))
+  (dimmer-configure-which-key)
+  (dimmer-configure-magit))
 
 ;; Zoom
 (use-package! zoom
