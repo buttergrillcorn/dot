@@ -53,7 +53,7 @@
 (package! org-autolist)
 
 
-(package! focus)
+;; (package! focus)
 (package! dimmer)
 (package! zoom)
 (package! beacon)

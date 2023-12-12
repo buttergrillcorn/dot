@@ -111,17 +111,18 @@
 (use-package! dimmer
   :config
   (dimmer-mode)
-  (setq dimmer-fraction 0.5)
+  (setq dimmer-fraction 0.3)
   (dimmer-configure-which-key)
   (dimmer-configure-magit))
 
 ;; Zoom
 (use-package! zoom
   :config
-  (custom-set-variables
-   '(zoom-mode t)))
+  (zoom-mode t))
+;; (custom-set-variables
+;; '(zoom-mode t))
 
 ;; Beacon
 (use-package! beacon
   :config
-  (beacon-mode))
+  (beacon-mode t))
