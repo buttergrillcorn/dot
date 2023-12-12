@@ -52,6 +52,8 @@
 ;; (package! doct)
 (package! org-autolist)
 
-(package! pophint)
+
 (package! focus)
 (package! dimmer)
+(package! zoom)
+(package! beacon)

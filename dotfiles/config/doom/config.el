@@ -108,5 +108,19 @@
 (setq-default explicit-shell-file-name (executable-find "fish"))
 
 ;; Dimmer
-(setq dimmer-mode t)
-(setq dimmer-fraction 0.4)
+(use-package! dimmer
+  :config
+  (dimmer-mode)
+  (setq dimmer-fraction 0.5)
+  (dimmer-configure-which-key))
+
+;; Zoom
+(use-package! zoom
+  :config
+  (custom-set-variables
+   '(zoom-mode t)))
+
+;; Beacon
+(use-package! beacon
+  :config
+  (beacon-mode))
