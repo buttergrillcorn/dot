@@ -129,3 +129,7 @@ tooltip label {
 #tray {
     color: @1;
 }
+
+#battery {
+    padding-right: 20px;
+}

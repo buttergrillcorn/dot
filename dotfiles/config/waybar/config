@@ -27,6 +27,7 @@
         "privacy",
         "pulseaudio",
         "pulseaudio/slider",
+        "battery",
         "clock",
     ],
 
@@ -109,5 +110,10 @@
             "activated": "󰈈",
             "deactivated": "󰈉",
         },
+    },
+
+    // --- Battery ---
+    "battery": {
+        "format": "BATTERY: {capacity}%",
     },
 }

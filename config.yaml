@@ -48,6 +48,9 @@ dotfiles:
     src: emacs.d
     dst: ~/.emacs.d
     ignore_missing_in_dotdrop: true
+  d_emacs:
+    src: config/emacs
+    dst: ~/.config/emacs
 profiles:
   Aloo-Paratha:
     dotfiles:
@@ -78,3 +81,4 @@ profiles:
     - d_omf
     - d_nvim
     # - d_emacs.d
+    - d_emacs
