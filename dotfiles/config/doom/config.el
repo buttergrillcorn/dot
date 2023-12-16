@@ -90,7 +90,13 @@
 ;; Load external files
 (load! "font.el")
 
-(setq which-key-idle-delay 0.2)
+;; Keybinds
+(map! "C-h" 'switch-to-prev-buffer)
+(map! "C-l" 'switch-to-next-buffer)
+(map! "C-S-l" 'recenter-top-bottom)
+
+;; Which-key
+;; (setq which-key-idle-delay 0.2)
 (setq auto-save-visited-interval 15)
 (auto-save-visited-mode +1)
 
@@ -107,22 +113,22 @@
 (setq-default vterm-shell (executable-find "fish"))
 (setq-default explicit-shell-file-name (executable-find "fish"))
 
-;; Dimmer
+;; dimmer
 (use-package! dimmer
-  :config
+  :init
   (dimmer-mode)
   (setq dimmer-fraction 0.3)
   (dimmer-configure-which-key)
   (dimmer-configure-magit))
 
 ;; Zoom
-(use-package! zoom
-  :config
-  (zoom-mode t))
+;; (use-package! zoom
+;;   :init
+;;   (zoom-mode t))
 ;; (custom-set-variables
-;; '(zoom-mode t))
+;;  '(zoom-ignored-major-modes '(which-key-mode)))
 
 ;; Beacon
 (use-package! beacon
-  :config
+  :init
   (beacon-mode t))
