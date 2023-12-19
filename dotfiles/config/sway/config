@@ -196,6 +196,7 @@ exec fcitx5
 exec autotiling
 exec emacs --daemon
 exec gammastep-indicator
+exec udiskie
 
 # Window rules
 for_window [app_id="firefox" title="Firefox — Sharing Indicator"] border none, floating enable, nofocus
