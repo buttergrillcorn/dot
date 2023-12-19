@@ -53,6 +53,8 @@
            "* %t %?" :empty-lines-after 1)
           ("w" "Work" entry (file "~/org/work.org")
            "* %t %?  %(org-set-tags \"work\")" :empty-lines-after 1)
+          ("j" "Journal" entry (file+datetree "~/org/journal.org")
+           "* %?" :jump-to-captured t :time-prompt t)
           )))
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
@@ -132,3 +134,9 @@
 (use-package! beacon
   :init
   (beacon-mode t))
+
+;; Golden Ratio
+;; (use-package! golden-ratio
+;;   :init
+;;   (golden-ratio-mode 1)
+;;   (setq golden-ratio-auto-scale 1))
