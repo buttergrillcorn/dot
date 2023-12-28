@@ -47,13 +47,13 @@
 ;; Org Capture
 (after! org
   (setq org-capture-templates
-        `(("t" "Todo" entry (file "~/org/11-todo.org")
+        `(("t" "Todo" entry (file "~/org/todo.org")
            "* TODO %U %?" :empty-lines-after 1)
-          ("i" "Inbox" entry (file "~/org/01-inbox.org")
+          ("i" "Inbox" entry (file "~/org/inbox.org")
            "* %t %?" :empty-lines-after 1)
-          ("w" "Work" entry (file "~/org/12-work.org")
+          ("w" "Work" entry (file "~/org/work.org")
            "* %t %?  %(org-set-tags \"work\")" :empty-lines-after 1)
-          ("j" "Journal" entry (file+datetree "~/org/31-journal.org")
+          ("j" "Journal" entry (file+datetree "~/org/journal.org")
            "* %?" :jump-to-captured t :time-prompt t)
           )))
 
