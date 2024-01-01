@@ -57,6 +57,16 @@
            "* %?" :jump-to-captured t :time-prompt t)
           )))
 
+;; Org Babel
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '(
+   (emacs-lisp . t)
+   (python . t)
+   (conf-toml . t)
+   (rust . t)
+   ))
+
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
 ;;
@@ -140,3 +150,11 @@
 ;;   :init
 ;;   (golden-ratio-mode 1)
 ;;   (setq golden-ratio-auto-scale 1))
+
+;; Org Modern
+(after! org
+  (global-org-modern-mode))
+
+;; Org Super Agenda
+(after! org
+  (setq org-super-agenda-mode t))
