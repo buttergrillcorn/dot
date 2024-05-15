@@ -23,7 +23,7 @@ output HDMI-A-1 {
        }
 ## --- Surface Laptop Studio Settings ---
 output eDP-1 {
-       resolution 2400x1600@120Hz position 0,0 scale 1
+       resolution 1920x1080@60Hz position 0,0 scale 1
        background ~/Pictures/Wallpapers/monochrome-building.jpeg fill
 }
 
@@ -36,6 +36,13 @@ input touchpad {
   middle_emulation enabled
 }
 input touch natural_scroll enabled
+## --- T480 ---
+input 1739:0:Synaptics_TM3276-022 {
+    tap enabled
+    tap_button_map lrm
+    natural_scroll enabled
+    middle_emulation enabled
+}
 ## --- Surface Laptop Studio Settings ---
 input 1118:2479:Microsoft_Surface_045E:09AF_Touchpad {
   tap enabled
@@ -46,10 +53,10 @@ input 1118:2479:Microsoft_Surface_045E:09AF_Touchpad {
 input 1118:2480:Microsoft_Surface_045E:09B0_Keyboard xkb_layout gb
 input 1118:2478:Microsoft_Surface_045E:09AE_Keyboard xkb_layout gb
 
-gaps inner 7
+gaps inner 5
 gaps outer 0
-default_border pixel 2
-default_floating_border pixel 2
+default_border pixel 1
+default_floating_border pixel 1
 # Color palette:    #202020 #606060 #9f9f9f #dfdfdf
 client.focused      #dfdfdf #dfdfdf #202020 #9f9f9f #dfdfdf
 client.unfocused    #606060 #606060 #dfdfdf #606060 #606060
@@ -59,6 +66,7 @@ exec swayidle -w \
      timeout 1800 'swaylock -f -c 202020 --indicator-idle-visible' \
      timeout 2700 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
      before-sleep 'swaylock -f -c 202020 --indicator-idle-visible'
+bindsym $mod+Ctrl+Shift+l exec swaylock -f -c 202020 --indicator-idle-visible
 
 # Bindings
 bindsym $mod+Return exec $term
@@ -191,11 +199,11 @@ exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1
 exec /usr/lib/xdg-desktop-portal -r
 exec /usr/lib/xdg-desktop-portal-wlr
 exec nm-applet --indicator
-exec kmix
+# exec kmix
 exec fcitx5
 exec autotiling
 exec emacs --daemon
-exec gammastep-indicator
+# exec gammastep-indicator
 exec udiskie
 
 # Window rules

@@ -8,6 +8,8 @@
     font-size: 14px;
     {%@@ elif profile == "Aloo-Paratha-Laptop" @@%}
     font-size: 18px;
+    {%@@ elif profile == "T480" @@%}
+    font-size: 13px;
     {%@@ endif @@%}
     min-height: 0;
 }
@@ -21,7 +23,7 @@
 window#waybar {
     background: @0;
     color: @2;
-    border: solid 2px @1;
+    border: solid 1px @1;
 }
 
 tooltip {
@@ -36,9 +38,9 @@ tooltip label {
 
 #workspaces {
     background-color: @0;
-    border-top: solid 2px;
+    border-top: solid 1px;
     border-top-color: @1;
-    border-bottom: solid 2px;
+    border-bottom: solid 1px;
     border-bottom-color: @1;
 }
 
@@ -64,9 +66,9 @@ tooltip label {
     padding-right: 15px;
     background: @2;
     color: @0;
-    border-top: solid 2px;
-    border-bottom: solid 2px;
-    border-left: solid 2px;
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+    border-left: solid 1px;
     border-color: @1;
 }
 
@@ -74,9 +76,9 @@ tooltip label {
     background-color: @2;
     color: @0;
     padding: 0 15px;
-    border-top: solid 2px;
-    border-bottom: solid 2px;
-    border-right: solid 2px;
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+    border-right: solid 1px;
     border-color: @1;
 }
 
@@ -101,25 +103,18 @@ tooltip label {
 }
 
 #pulseaudio-slider slider {
-    min-height: 1px;
-    min-width: 1px;
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 0;
+    background-image: none;
     border: none;
-    border-radius: 25px;
     box-shadow: none;
-    background-color: @2;
-    color: @2;
 }
 
 #pulseaudio-slider trough {
-    min-height: 2px;
+    min-height: 3px;
     min-width: 50px;
-    background-color: @1;
-}
-
-#pulseaudio-slider highlight {
-    min-height: 2px;
-    min-width: 50px;
-    background-color: @1;
+    background-color: #3a3a3a;
 }
 
 #custom-scratchpad {
