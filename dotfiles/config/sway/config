@@ -19,12 +19,12 @@ set $file-float  ~/.config/sway/floating thunar
 # --- Output (Displays) ---
 output HDMI-A-1 {
        resolution 2560x1440@144Hz position 0,0
-       background ~/Pictures/Wallpapers/monochrome-building.jpeg fill
+       background ~/Pictures/Wallpapers/wallpaper.jpeg fill
        }
 ## --- Surface Laptop Studio Settings ---
 output eDP-1 {
        resolution 1920x1080@60Hz position 0,0 scale 1
-       background ~/Pictures/Wallpapers/monochrome-building.jpeg fill
+       background ~/Pictures/Wallpapers/wallpaper.jpeg fill
 }
 
 # --- Input (Devices) ---
@@ -196,13 +196,12 @@ exec wl-paste -t text --watch clipman store --no-persist
 exec mako
 exec blueman-applet
 exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1 
-exec /usr/lib/xdg-desktop-portal -r
-exec /usr/lib/xdg-desktop-portal-wlr
+# exec /usr/lib/xdg-desktop-portal -r
+exec /usr/lib/xdg-desktop-portal-wlr -r
 exec nm-applet --indicator
-# exec kmix
-exec fcitx5
+exec_always fcitx5 -d --replace
 exec autotiling
-exec emacs --daemon
+# exec emacs --daemon
 # exec gammastep-indicator
 exec udiskie
 

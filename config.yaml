@@ -35,9 +35,9 @@ dotfiles:
   d_waybar:
     src: config/waybar
     dst: ~/.config/waybar
-  f_monochrome-building.jpeg:
-    src: Pictures/Wallpapers/monochrome-building.jpeg
-    dst: ~/Pictures/Wallpapers/monochrome-building.jpeg
+  f_wallpaper.jpeg:
+    src: Pictures/Wallpapers/wallpaper.jpeg
+    dst: ~/Pictures/Wallpapers/wallpaper.jpeg
   d_omf:
     src: config/omf
     dst: ~/.config/omf
@@ -62,7 +62,7 @@ profiles:
     - d_sway
     - d_thunar
     - d_waybar
-    - f_monochrome-building.jpeg
+    - f_wallpaper.jpeg
     - d_omf
     - d_nvim
     # - d_emacs.d
@@ -77,7 +77,7 @@ profiles:
     - d_sway
     - d_thunar
     - d_waybar
-    - f_monochrome-building.jpeg
+    - f_wallpaper.jpeg
     - d_omf
     - d_nvim
     # - d_emacs.d
@@ -93,7 +93,7 @@ profiles:
     - d_sway
     - d_thunar
     - d_waybar
-    - f_monochrome-building.jpeg
+    - f_wallpaper.jpeg
     - d_omf
     - d_nvim
     # - d_emacs.d
